@@ -23,7 +23,7 @@ class PigLatinizer
         i << z
       end
     end
-    i.join
+    i.join(" ")
   end
         
         
