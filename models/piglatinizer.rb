@@ -5,7 +5,7 @@ class PigLatinizer
     i = []
     text.each do |x|
       if x.chars.first.scan(/[aeiou]/).count == 1
-        if x.chars == 1 
+        if x.chars.size == 1 
           y = x.capitalize
           a = [y, 'way'].join
           i << a
