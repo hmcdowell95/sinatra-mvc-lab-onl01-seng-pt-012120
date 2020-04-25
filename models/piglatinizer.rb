@@ -2,6 +2,10 @@ class PigLatinizer
   
   attr_accessor :text
   
+  def initialize
+    @text = text
+  end
+  
   def piglatinize(w)
     text = w.downcase.split(" ")
     i = []
