@@ -6,10 +6,13 @@ class PigLatinizer
     text.each do |x|
       if x.chars.first.scan(/[aeiou]/).count == 1
         if x.chars == 1 
-          x.capitalize
+          y = x.capitalize
+          a = [y, 'way'].join
+          i << a
+        else
+          a = [x, 'way'].join
+          i << a
         end
-        a = [x, 'way'].join
-        i << a
       else
         z = x.chars
         a = []
