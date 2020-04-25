@@ -20,8 +20,7 @@ class PigLatinizer
         a << "ay"
         b = a.join
         z << b
-        z.join
-        i << z
+        i << z.join
       end
     end
     i.join(" ")
