@@ -11,12 +11,11 @@ class PigLatinizer
         i << x
       else
         z = x.chars
-        y = z.first
         a = []
-        begin
-          a << y
-          z.shift
-        end until y.scan(/[aeiou]/).count == 1
+        until z.first.scan(/[aeiou]/).count == 1 do
+         a << z.first
+         z.shift
+        end
         a << "ay"
         b = a.join
         z << b
