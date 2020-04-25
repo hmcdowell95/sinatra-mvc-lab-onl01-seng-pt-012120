@@ -4,7 +4,7 @@ class PigLatinizer
     text = w.split(" ")
     i = []
     text.each do |x|
-      if x.chars.first.scan(/[aeiou]/).count == 1
+      if x.chars.first.downcase.scan(/[aeiou]/).count == 1
         a = [x, 'way'].join
         i << a
       else
