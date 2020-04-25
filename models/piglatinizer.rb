@@ -5,9 +5,12 @@ class PigLatinizer
     i = []
     text.each do |x|
       if x.chars.first.scan(/[aeiou]/).count == 1
+        if x.chars == 1 
+          x.capitalize
+        end
         a = [x, 'way'].join
         i << a
-      elsif x.chars.first.scan()
+      elsif x.chars.first.scan(/[bcdfghjklmnpqrstvwxyz]/) == 1
         z = x.chars
         a = []
         until z.first.scan(/[aeiou]/).count == 1 do
