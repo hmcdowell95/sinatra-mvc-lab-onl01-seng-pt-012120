@@ -10,7 +10,7 @@ class PigLatinizer
         end
         a = [x, 'way'].join
         i << a
-      elsif x.chars.first.scan(/[bcdfghjklmnpqrstvwxyz]/) == 1
+      else
         z = x.chars
         a = []
         until z.first.scan(/[aeiou]/).count == 1 do
