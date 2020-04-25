@@ -7,8 +7,8 @@ class PigLatinizer
       if x.chars.first.scan(/[aeiou]/).count == 1
         a = [x, 'way'].join
         i << a
-      elsif x.scan(/[aeiou]/).count == 0
-        i << x
+      elsif x.scan(/[aeiou]/).count == 1
+        i << x.capitialize
       else
         z = x.chars
         a = []
